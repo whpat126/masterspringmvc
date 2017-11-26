@@ -3,6 +3,7 @@ package tonps.masterspringmvc.profile;
 /**
  * @author wanghh on 2017-11-27 0:16
  */
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.core.io.Resource;
@@ -41,12 +42,12 @@ public class UserProfileSession implements Serializable {
         return profileForm;
     }
 
-    public void setPicturePath(Resource picturePath) throws IOException {
-        this.picturePath = picturePath.getURL();
-    }
-
     public Resource getPicturePath() {
         return picturePath == null ? null : new UrlResource(picturePath);
+    }
+
+    public void setPicturePath(Resource picturePath) throws IOException {
+        this.picturePath = picturePath.getURL();
     }
 
     public List<String> getTastes() {

@@ -1,8 +1,5 @@
 package tonps.masterspringmvc.profile;
 
-/**
- * @author wanghh on 2017-11-27 0:15
- */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +12,9 @@ import tonps.masterspringmvc.date.USLocalDateFormatter;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Locale;
-
+/**
+ * @author wanghh on 2017-11-27 0:15
+ */
 @Controller
 public class ProfileController {
     private UserProfileSession userProfileSession;
