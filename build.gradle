@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.8.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.8.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -19,12 +19,19 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenLocal()
-	mavenCentral()
+    mavenLocal()
+    mavenCentral()
 }
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile 'org.springframework.boot:spring-boot-starter-social-twitter'
+    // https://mvnrepository.com/artifact/org.webjars/materializecss
+    compile group: 'org.webjars', name: 'materializecss', version: '0.100.2'
+    // https://mvnrepository.com/artifact/org.webjars/jquery
+    compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }

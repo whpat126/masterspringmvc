@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * spring boot 启动类
+ * @author wanghh
  */
 @SpringBootApplication
 public class MasterspringmvcApplication {
